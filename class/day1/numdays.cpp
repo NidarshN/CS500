@@ -14,19 +14,19 @@ int main(){
   
   std::cout << "Enter a year: ";
   std::cin >> year;
-  std::cout << "Enter the month:\n"
-	    << "1 - January\n"
-	    << "2 - Febraury\n"
-            << "3 - March\n"
-            << "4 - April \n"
-	    << "5 - May\n"
-	    << "6 - June\n"
-	    << "7 - July\n"
-	    << "8 - August\n"
-	    << "9 - September\n"
-	    << "10 - October\n"
-	    << "11 - November\n"
-	    << "12 - December\n";
+  std::cout << "Enter the month: " << std::endl
+	    << "1 - January" << std::endl
+	    << "2 - Febraury" << std::endl
+            << "3 - March" << std::endl
+            << "4 - April" << std::endl
+	    << "5 - May" << std::endl
+	    << "6 - June" << std::endl 
+	    << "7 - July" << std::endl
+	    << "8 - August" << std::endl
+	    << "9 - September" << std::endl
+	    << "10 - October" << std::endl
+	    << "11 - November" << std::endl
+	    << "12 - December" << std::endl;
   std::cin >> month;
   result = evalLeap(year);
   switch(month){

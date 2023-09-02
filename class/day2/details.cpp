@@ -11,15 +11,15 @@ struct Details {
 
 int main(){
   Details detail;
-  std::cout << "Enter your first name: " <<std::endl;
+  std::cout << "Enter your first name: " << std::endl;
   std::cin >> detail.firstName;
-  std::cout << "Enter your last name: " <<std::endl;
+  std::cout << "Enter your last name: " << std::endl;
   std::cin >> detail.lastName;
-  std::cout << "Enter your phone number: " <<std::endl;
+  std::cout << "Enter your phone number: " << std::endl;
   std::cin >> detail.phoneNumber;
   
   std::getline(std::cin, detail.address);
-  std::cout << "Enter your address: " <<std::endl;
+  std::cout << "Enter your address: " << std::endl;
   std::getline(std::cin, detail.address);
  
   std::cout << std::setprecision(0) << std::fixed << std::endl;

@@ -4,15 +4,16 @@
 int fibonacci(int n);
 
 int main(){
+  
   std::string s;
   int i;
   
-  std::cout << "Enter a Number:";
+  std::cout << "Enter a Number:" << std::endl;
   std::cin >> s;
   i = stoi(s);
 
   
-  std::cout << fibonacci(i) << '\n';
+  std::cout << fibonacci(i) << std::endl;
 }
 
 int fibonacci(int n){

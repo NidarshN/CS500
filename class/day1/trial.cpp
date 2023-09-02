@@ -1,26 +1,28 @@
 #include <iostream>
 
 int main(){
-  std::cout << 2+3<<"\n";
-  std::cout<< 3 * 6.0 <<"\n";
-  std::cout << 19 / 5 << "\n";
-  std::cout <<19%5<<"\n";
-  std::cout <<19.0/5<<"\n";
-  std::cout <<2%7<<"\n";
+  std::cout << 2+3 << std::endl;
+  std::cout<< 3 * 6.0 << std::endl;
+  std::cout << 19 / 5 << std::endl;
+  std::cout <<19 % 5 << std::endl;
+  std::cout <<19.0 / 5 << std::endl;
+  std::cout <<2 % 7 << std::endl;
 
 
-  std::cout <<"--------\n";
+  std::cout << "--------" << std::endl;
+  
   int a = 5;
   int b = a++; 
-  std::cout << "a: " << a << "\n"; 
-  std::cout << "b: " << b << "\n";
+  std::cout << "a: " << a << std::endl; 
+  std::cout << "b: " << b << std::endl;
 
 
-  std::cout <<"--------\n";
+  std::cout << "--------" << std::endl;
+  
   a = 5; 
   b = ++a; 
-  std::cout << "a: " << a << "\n"; 
-  std::cout << "b: " << b << "\n";
+  std::cout << "a: " << a << std::endl; 
+  std::cout << "b: " << b << std::endl;
 
   return 0;
 }

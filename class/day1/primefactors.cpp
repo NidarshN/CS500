@@ -10,22 +10,24 @@ void primefactor(int n){
 
   for(i=3; i <= sqrt(n); i += 2){
     while(n % i == 0){
-      std:: cout << i << " \t";
+      std::cout << i << " \t";
       n = n / i;
     }
   }
 
   if(n > 2){
-    std::cout<<n<<"\t";
+    std::cout << n << "\t";
   }
 }
 
 int main(){
   int num = 0;
 
-  std::cout<< "Enter the number: ";
+  std::cout << "Enter the number: " << std::endl;
   std::cin >> num;
-  std::cout<<"The prime factors are ";
+  
+  std::cout << "The prime factors are:" << std::endl;
   primefactor(num);
+  
   return 0;
 }

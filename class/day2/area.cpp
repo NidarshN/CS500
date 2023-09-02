@@ -28,10 +28,7 @@ int main(){
 	      << length << "x" << length << "): "
               << area(length) << std::endl;
   }
-  
-  
-    
-    
+ 
   return 0;
 }
 
