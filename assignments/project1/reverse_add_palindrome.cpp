@@ -1,40 +1,37 @@
 #include <iostream>
+#include <fstream>
+#include <string>
+#include <vector>
 
+
+std::vector<unsigned long> readData(std::string filename);
+void printVec(std::vector<unsigned long> vec_data);
 bool checkPalindrome(unsigned long num);
 unsigned long reverseNum(unsigned long num);
-void printArr(unsigned long arr[], int arr_size);
 void revAdd(unsigned long num);
-void getPalindrome(unsigned long num_arr[], int num_cases);
+void getPalindrome(std::vector<unsigned long> vec_data);
 
 const unsigned long UPPER_LIMIT = 4294967295;
 
 int main(){
 
-  int num_cases = 0;
+  const std::string filename = "reverse_add_palindrome.txt";
  
+  std::vector<unsigned long>  vec_data = readData(filename);
 
-  std::cout << "Enter the number of test cases: " << std::endl;
-  std::cin >> num_cases;
+  printVec(vec_data);
 
-  unsigned long res_arr[num_cases], num_arr[num_cases];
-  int min_iter_arr[num_cases];
-
-  std::cout << "Enter the " << num_cases << " test cases: " << std::endl;
-  for(int i=0; i < num_cases; ++i){
-    std::cin >> num_arr[i];
-  }
-
-  std::cout << std::endl << "Output: " << std::endl;
+  std::cout << std::endl << "Output: " << std::endl << std::endl;
   
-  getPalindrome(num_arr, num_cases);
+  getPalindrome(vec_data);
 
 
   return 0;
 }
 
-void getPalindrome(unsigned long num_arr[], int num_cases){
-  for(int i=0; i < num_cases; i++){
-    revAdd(num_arr[i]);
+void getPalindrome(std::vector<unsigned long> vec_data){
+  for(int i=1; i < vec_data.size(); i++){
+    revAdd(vec_data[i]);
   }
 }
 
@@ -52,7 +49,8 @@ void revAdd(unsigned long num){
   }
 
   if(num > UPPER_LIMIT){
-    std::cout << "For " << temp_num << ", Palindrome does not exist!" << std::endl;
+    std::cout << "For " << temp_num
+	      << ", Palindrome does not exist!" << std::endl;
   }
   return;
 }
@@ -79,10 +77,31 @@ bool checkPalindrome(unsigned long num){
 }
 
 
-void printArr(unsigned long arr[], int arr_size){
-  for(int i = 0; i < arr_size; ++i){
-    std::cout << arr[i] << std::endl;
+void printVec(std::vector<unsigned long> vec_data){
+  std::cout << std::endl << "Vector Data: " << std::endl;
+  for(int i = 0; i < vec_data.size(); ++i){
+    std::cout << vec_data[i] << std::endl;
   }
 
   std::cout << std::endl;
+}
+
+
+std::vector<unsigned long> readData(std::string filename){
+  std::ifstream dataFile (filename);
+  std::string dataLine;
+  unsigned long temp;
+  std::vector<unsigned long> vec_data;
+  
+  if(dataFile.is_open()){
+    while(dataFile){
+      std::getline(dataFile, dataLine);
+      if(!dataLine.empty()){
+	 temp = std::strtoull(dataLine.c_str(), NULL, 10);
+	 vec_data.push_back(temp);
+      }
+     
+    }
+  }
+  return vec_data;
 }
