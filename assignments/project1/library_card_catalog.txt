@@ -1,0 +1,39 @@
+One Piece
+Eiichiro Oda
+LCCNM01
+manga adventure drama thriller
+Shueisha
+1997
+1
+
+Naruto
+Masahi Kishimoto
+LCCNM02
+manga adventure drama
+Shueisha
+1999
+1
+
+Moby Dick
+Herman Melville
+LCCNL01
+fiction adventure thriller
+Richard Bentley
+1851
+1
+
+The Wizard of Oz
+L. Frank Baum
+LCCNL02
+fantasy adventure magic
+L. Frank Baum
+1900
+1
+
+Programming Abstractions in C++
+Eric S. Roberts
+LCCNCS01
+c++ computer coding
+pearson
+2013
+1
