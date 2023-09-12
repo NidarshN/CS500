@@ -15,8 +15,7 @@ int main(){
   displayWelcome();
   
   std::string secret_word = chooseRandomWord();
-  
-  std::cout << secret_word << std::endl;
+
 
   initGame(secret_word);
 
@@ -45,8 +44,6 @@ void initGame(std::string secret_word){
   for(int i=0; i < word_len; ++i){
     temp_word += '-';
   }
-  std::cout << "Actual Word: " << secret_word << std::endl
-            << "Masked Word: " << temp_word;
 
   while(!isMatch && turns > 0){
     char ch;
