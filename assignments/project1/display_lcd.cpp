@@ -57,11 +57,16 @@ void readData(){
 
 void getDigit(long size, long num){
   unsigned long temp_n = num, rev;
+  std::vector<int> inp;
   int dig;
   while(temp_n > 0){
     dig = (int) temp_n % 10;
-    printDigit(size, dig);
+    inp.push_back(dig);
     temp_n /= 10;
+  }
+  
+  for(int i=inp.size()-1; i >= 0; --i){
+    printDigit(size, inp[i]);
   }
 }
 
