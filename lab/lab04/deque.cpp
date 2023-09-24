@@ -1,45 +1,25 @@
 #include <iostream>
 #include "deque.h"
 
-/*
-class Deque{
 
-private:
-  struct Node{
-    int val;
-    Node* prevNode;
-    Node* nextNode;
- 
-
-    Node(Node* prev, int value, Node* next){
-        prevNode = prev;
-        val = value;
-        nextNode = next;
-    }
-  };
-  
-  Node* startOfQueue;
-  Node* endOfQueue;
-
-public:*/
-  Deque::Deque(){
+Deque::Deque(){
     startOfQueue = nullptr;
     endOfQueue = nullptr;
-  }
+}
 
 bool Deque::is_empty(){
     return (getStartOfQueue() == nullptr);
-  }
+}
 
-  Deque::Node* Deque::getStartOfQueue(){
+Deque::Node* Deque::getStartOfQueue(){
     return startOfQueue;
-  }
+}
 
-  void Deque::setStartOfQueue(Node* n){
+void Deque::setStartOfQueue(Node* n){
     startOfQueue = n;
-  }
+}
 
-  void Deque::push_front(int i){
+void Deque::push_front(int i){
     Deque::Node* newNode = new Deque::Node(nullptr, i, getStartOfQueue());
     if(is_empty()){
       setEndOfQueue(newNode);
@@ -48,10 +28,10 @@ bool Deque::is_empty(){
     }
     setStartOfQueue(newNode);
     
-  }
+}
 
-  int Deque::pop_front(){
-    if(!is_empty()){
+int Deque::pop_front(){
+   if(!is_empty()){
       int val = getStartOfQueue()->val;
       Deque::Node* newStart = getStartOfQueue()->nextNode;
       delete getStartOfQueue();
@@ -63,23 +43,23 @@ bool Deque::is_empty(){
     }
     std::cout << "Error: Tried popping an empty deque!" << std::endl;
     return 0;
-  }
+}
 
-  int Deque::peak_front(){
+int Deque::peak_front(){
     if(!is_empty()) return getStartOfQueue()->val;
     std::cout << "Error: Tried to peak into an empty deque!" << std::endl;
     return 0;
-  }
+}
 
-  Deque::Node* Deque::getEndOfQueue(){
+Deque::Node* Deque::getEndOfQueue(){
     return endOfQueue;
-  }
+}
 
-  void Deque::setEndOfQueue(Node* n){
+void Deque::setEndOfQueue(Node* n){
     endOfQueue = n;
-  }
+}
 
-  void Deque::push_back(int i){
+void Deque::push_back(int i){
     Deque::Node* newNode = new Deque::Node(getEndOfQueue(), i, nullptr);
     if(is_empty()){
       setStartOfQueue(newNode);
@@ -87,9 +67,9 @@ bool Deque::is_empty(){
       getEndOfQueue()->nextNode = newNode;
     }
     setEndOfQueue(newNode);
-  }
+}
 
-  int Deque::pop_back(){
+int Deque::pop_back(){
     if(!is_empty()){
       int val = getEndOfQueue()->val;
       Deque::Node* newEnd = getEndOfQueue()->prevNode;
@@ -104,32 +84,33 @@ bool Deque::is_empty(){
     }
     std::cout << "Error: Tried popping an empty deque!" << std::endl;
     return 0;
-  }
+}
 
-  int Deque::peak_back(){
+int Deque::peak_back(){
     if(!is_empty()) return getEndOfQueue()->val;
     std::cout << "Error: Tried to peak into an empty deque!" << std::endl;
     return 0;
-  }
+}
 
-  void Deque::remove_all(){
+void Deque::remove_all(){
     while(!is_empty()){
       pop_front();
     }
-  }
+}
 
-  void Deque::peak_all(){
-    Deque::Node* pTraverse = getStartOfQueue();
-    while(pTraverse != nullptr){
-      std::cout <<pTraverse->val << "\t";
-      pTraverse = pTraverse->nextNode;
+void Deque::peak_all(){
+    if(!is_empty()){
+      Deque::Node* pTraverse = getStartOfQueue();
+      while(pTraverse != nullptr){
+	std::cout <<pTraverse->val << "\t";
+	pTraverse = pTraverse->nextNode;
+      }
+    }else{
+      std::cout << "Error: Deque Empty!";
     }
     std::cout << std::endl;
-  }
+}
 
-  Deque::~Deque(){
+Deque::~Deque(){
     remove_all();
-  }
-
-
-//};
+}
