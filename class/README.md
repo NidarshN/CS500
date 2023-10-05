@@ -16,3 +16,5 @@ ____
 10. [Recursion](./day10/)  
 11. Backtracking Part I  
 12. Backtracking Part II  
+13. Recap for Midterm
+14. Coming Soon  
