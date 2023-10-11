@@ -11,6 +11,7 @@ CharStack::CharStack(){
 
 CharStack::~CharStack(){
   clear();
+  delete top;
 }
 
 
@@ -23,7 +24,7 @@ bool CharStack::isEmpty(){
 }
 
 void CharStack::clear(){
-  while(top != nullptr){
+  while(getTop() != nullptr){
     char temp = pop();
   }
   sizeOfStack = 0;
@@ -35,11 +36,11 @@ void CharStack::push(char ch){
 }
 
 char CharStack::pop(){
-  if(top != nullptr){
-    char temp = top->val;
-    Node* newTop = top->nextNode;
+  if(getTop() != nullptr){
+    char temp = getTop()->val;
+    Node* newTop = getTop()->nextNode;
 
-    delete top;
+    delete getTop();
     --sizeOfStack;
     setTop(newTop);
     return temp;
@@ -49,12 +50,17 @@ char CharStack::pop(){
 }
 
 char CharStack::peek(){
-  if(top != nullptr) return top->val;
+  if(getTop() != nullptr) return getTop()->val;
   std::cout << "Error: Tried peek an empty stack!" << std::endl;
   return 0;
+}
+
+CharStack::Node* CharStack::getTop(){
+  return top;
 }
 
 void CharStack::setTop(Node* n){
   top = n;
   ++sizeOfStack;
 }
+

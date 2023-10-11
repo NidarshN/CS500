@@ -110,6 +110,15 @@ public:
   char peek();
 
   /*
+  * Method: getTop
+  * Usage: catk.getTop();
+  * ---------------------
+  * Return the top of the stack.
+  */
+
+  Node* getTop();
+
+  /*
   * Method: setTop
   * Usage: catk.setTop(Node* n);
   * ----------------------------
@@ -117,7 +126,6 @@ public:
   */
   
   void setTop(Node* n);
-
 };
 
 #endif
