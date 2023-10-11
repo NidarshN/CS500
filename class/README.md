@@ -17,4 +17,5 @@ ____
 11. Backtracking Part I  
 12. Backtracking Part II  
 13. Recap for Midterm
-14. Coming Soon  
+14. [Dynamic Memory Allocation](./day14/)  
+  
