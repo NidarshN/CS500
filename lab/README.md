@@ -5,7 +5,7 @@ ____
 ## Index  
 
 1. Introduction  
-2. [Introduction to Git & Fibonnaci Series](./lab02/)
+2. Introduction to Git
 3. [Make files](./lab03/)
 4. [Pointers, Class and Data Structures](./lab04/)
 5. [Regular Expressions](./lab05/)
