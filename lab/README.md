@@ -12,3 +12,4 @@ ____
 6. [Backtracking (TicTacToe using MiniMax Algorithm)](./lab06/)
 7. [Evil Hangman](./lab07/)
 8. [Mystring](./lab08/)
+9. [Debugging](./lab09/)
