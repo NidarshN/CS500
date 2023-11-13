@@ -1,0 +1,32 @@
+Start testing: Nov 13 11:03 CST
+----------------------------------------------------------
+1/1 Testing: testingExample
+1/1 Test: testingExample
+Command: "/Users/nidarsh/Code/Masters/CPP/lab/lab10/build/testingExample"
+Directory: /Users/nidarsh/Code/Masters/CPP/lab/lab10/build
+"testingExample" start time: Nov 13 11:03 CST
+Output:
+----------------------------------------------------------
+[==========] Running 3 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 3 tests from PokerHandTest
+[ RUN      ] PokerHandTest.PlayerTwoWins
+[       OK ] PokerHandTest.PlayerTwoWins (0 ms)
+[ RUN      ] PokerHandTest.PlayerOneWins
+[       OK ] PokerHandTest.PlayerOneWins (0 ms)
+[ RUN      ] PokerHandTest.Tie
+[       OK ] PokerHandTest.Tie (0 ms)
+[----------] 3 tests from PokerHandTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 3 tests from 1 test suite ran. (0 ms total)
+[  PASSED  ] 3 tests.
+<end of output>
+Test time =   0.30 sec
+----------------------------------------------------------
+Test Passed.
+"testingExample" end time: Nov 13 11:03 CST
+"testingExample" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Nov 13 11:03 CST
