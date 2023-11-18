@@ -7,6 +7,7 @@ This C++ implementation provides a Vignere cipher for encrypting and decrypting 
 - [Features](#features)
 - [Usage](#usage)
 - [Example](#example)
+- [References](#references)
 
 ## Features
 
@@ -50,3 +51,9 @@ int main() {
 
     return 0;
 }
+```
+
+## References
+
+1. [Doxygen Documentation](https://www.doxygen.nl/index.html)
+2. [ChatGPT for Doxygen Main Page](https://chat.openai.com/)
