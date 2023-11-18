@@ -30,6 +30,8 @@ To use the Vignere cipher implementation, follow these steps:
 
 ```cpp
 #include "vignere.h"
+#include <iostream>
+#include <string>
 
 int main() {
     // Create Vignere instance with key "KEY"
