@@ -14,3 +14,4 @@ ____
 8. [Mystring](./lab08/)
 9. [Debugging](./lab09/)
 10. [Poker Hand & Google Test Framework](./lab10/README.md)
+11. [Vignère Cipher Implementation & Doxygen](./lab11/README.md)
