@@ -36,7 +36,7 @@ This project is an implementation of the classic Snake Game using the BRIDGES AP
 
 ## Video
 
-![Video](./Snake_Bridges.mp4)
+![Video](./Snake_Bridges.gif)
 
 ## License
 
