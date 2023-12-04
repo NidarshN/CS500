@@ -1,0 +1,1 @@
+/Library/Developer/CommandLineTools/usr/bin/c++  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk -mmacosx-version-min=13.6 -dynamiclib -Wl,-headerpad_max_install_names -o libhammingCode.dylib -install_name @rpath/libhammingCode.dylib CMakeFiles/hammingCode.dir/hamming_code.cpp.o 

@@ -1,0 +1,43 @@
+\chapter{Hamming(7,4) Code Decoder Implmentation in C++}
+\hypertarget{index}{}\label{index}\index{Hamming(7,4) Code Decoder Implmentation in C++@{Hamming(7,4) Code Decoder Implmentation in C++}}
+\hypertarget{index_intro}{}\doxysection{\texorpdfstring{Introduction}{Introduction}}\label{index_intro}
+This documentation provides information on the Hamming(7, 4) Code Decoder implementation in C++. The Hamming Code (7,4) is a message error detection consisting of a 4-\/bit data word and 3 parity bits, allowing the detection and correction of single-\/bit errors in the received codeword.\hypertarget{index_features}{}\doxysection{\texorpdfstring{Features}{Features}}\label{index_features}
+
+\begin{DoxyItemize}
+\item Matrix Operations\+: Uses Eigen library for efficient matrix operations, including generator matrix generation, parity check matrix generation, and identity matrix creation.
+\item Easy Integration\+: Provides a simple C++ interface for integrating the Hamming Code (7,4) decoder into your projects.
+\item File Input\+: Supports reading Hamming encoded codewords from a text file, making it convenient for processing large datasets.
+\item Decoding Functionality\+: Decodes 7-\/bit codewords using the Hamming (7,4) code, providing a pair indicating success or error detection, and the 4-\/bit decoded message.
+\end{DoxyItemize}\hypertarget{index_usage}{}\doxysection{\texorpdfstring{Usage}{Usage}}\label{index_usage}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#include\ "{}hamming\_code.h"{}}}
+\DoxyCodeLine{\textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{\textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{\textcolor{preprocessor}{\#include\ <eigen3/Eigen/Dense>}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keywordtype}{int}\ main()\ \{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ Create\ Hamming\ Code\ instance}}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{class_hamming_code}{HammingCode}}\ hammingCode;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ std::string\ filename\ =\ \textcolor{stringliteral}{"{}YOUR\_HAMMING\_ENCODED\_CODEWORDS.txt"{}}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ Read\ Hamming\ Encoded\ Codewords\ from\ a\ file}}
+\DoxyCodeLine{\ \ \ \ hammingCode.\mbox{\hyperlink{class_hamming_code_a540e7915f824d15e5f9e5e1b91c1a411}{readFile}}(filename);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ Function\ call\ to\ the\ Hamming\ Decoder\ to\ decode\ the\ codewords}}
+\DoxyCodeLine{\ \ \ \ hammingCode.\mbox{\hyperlink{class_hamming_code_a56eaa6c7afdc09055c3a4f50fd7884e2}{decoder}}();}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ Decode\ an\ encoded\ hamming\ code}}
+\DoxyCodeLine{\ \ \ \ Eigen::VectorXd\ codeword(7);}
+\DoxyCodeLine{\ \ \ \ codeword\ <<\ 0,\ 1,\ 1,\ 0,\ 0,\ 1,\ 1;}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{auto}\ decodedMessage\ =\ hammingCode.\mbox{\hyperlink{class_hamming_code_a93d80d69fca1177362534f48e884038d}{decode}}(codeword);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ Output\ results}}
+\DoxyCodeLine{\ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Encrypted\ Code\ for\ 0110:\ "{}}\ <<\ codeword\ <<\ std::endl;}
+\DoxyCodeLine{\ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Decrypted\ Message:\ "{}}\ <<\ decodedMessage\ <<\ std::endl;}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+ 

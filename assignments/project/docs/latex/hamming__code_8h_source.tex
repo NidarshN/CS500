@@ -1,0 +1,52 @@
+\doxysection{hamming\+\_\+code.\+h}
+\hypertarget{hamming__code_8h_source}{}\label{hamming__code_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ \_hamming\_code\_h}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ \_hamming\_code\_h}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#define\ EIGEN\_NO\_DEBUG}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#define\ EIGEN\_NO\_STATIC\_ASSERT}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}eigen/Eigen/Dense"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <fstream>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <utility>}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00094\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_hamming_code}{HammingCode}}}
+\DoxyCodeLine{00095\ \{}
+\DoxyCodeLine{00096\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00097\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ CODEWORD\_SIZE\ =\ 7;}
+\DoxyCodeLine{00098\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ CHECKBIT\_SIZE\ =\ 3;}
+\DoxyCodeLine{00099\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ MESSAGE\_SIZE\ =\ CODEWORD\_SIZE\ -\/\ CHECKBIT\_SIZE;}
+\DoxyCodeLine{00100\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ INIT\_VALUE\ =\ 1;}
+\DoxyCodeLine{00101\ \ \ \ \ \textcolor{keywordtype}{int}\ codeword\_length\ =\ 1;}
+\DoxyCodeLine{00102\ }
+\DoxyCodeLine{00103\ \ \ \ \ Eigen::MatrixXd\ generator\_matrix;}
+\DoxyCodeLine{00104\ \ \ \ \ Eigen::MatrixXd\ parity\_check\_matrix;}
+\DoxyCodeLine{00105\ \ \ \ \ Eigen::MatrixXd\ parity\_matrix;}
+\DoxyCodeLine{00106\ \ \ \ \ Eigen::MatrixXd\ identity\_matrix\_generate;}
+\DoxyCodeLine{00107\ \ \ \ \ Eigen::MatrixXd\ identity\_matrix\_decode;}
+\DoxyCodeLine{00108\ \ \ \ \ Eigen::MatrixXd\ codeword\_matrix;}
+\DoxyCodeLine{00109\ }
+\DoxyCodeLine{00110\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00118\ \ \ \ \ \mbox{\hyperlink{class_hamming_code_a1592ecf605b22112b5298da79de499d5}{HammingCode}}();}
+\DoxyCodeLine{00119\ }
+\DoxyCodeLine{00127\ \ \ \ \ \mbox{\hyperlink{class_hamming_code_ad7a661c8d0f858f35adec1d73b1d52ab}{\string~HammingCode}}();}
+\DoxyCodeLine{00128\ }
+\DoxyCodeLine{00135\ \ \ \ \ Eigen::MatrixXd\ \mbox{\hyperlink{class_hamming_code_ac6807dea81d5d50a5ced18b2a92f628c}{getIdentityMatrix}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ SIZE)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00136\ }
+\DoxyCodeLine{00142\ \ \ \ \ Eigen::MatrixXd\ \mbox{\hyperlink{class_hamming_code_a55f050d7a18c7a756a84beff386c1ed0}{getGeneratorMatrix}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00143\ }
+\DoxyCodeLine{00149\ \ \ \ \ Eigen::MatrixXd\ \mbox{\hyperlink{class_hamming_code_aadf4057ffb70c689d23a1ba981938fe6}{getParityCheckMatrix}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00150\ }
+\DoxyCodeLine{00156\ \ \ \ \ Eigen::MatrixXd\ \mbox{\hyperlink{class_hamming_code_a688fcbd5a04961d5a3c4cfa6e56e4789}{getCodewordMatrix}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00157\ }
+\DoxyCodeLine{00164\ \ \ \ \ std::pair<bool,\ Eigen::VectorXd>\ \mbox{\hyperlink{class_hamming_code_a93d80d69fca1177362534f48e884038d}{decode}}(\textcolor{keyword}{const}\ Eigen::VectorXd\ \&codeword);}
+\DoxyCodeLine{00165\ }
+\DoxyCodeLine{00172\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_hamming_code_a56eaa6c7afdc09055c3a4f50fd7884e2}{decoder}}();}
+\DoxyCodeLine{00173\ }
+\DoxyCodeLine{00179\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_hamming_code_a540e7915f824d15e5f9e5e1b91c1a411}{readFile}}(\textcolor{keyword}{const}\ std::string\ \&filename);}
+\DoxyCodeLine{00180\ \};}
+\DoxyCodeLine{00181\ }
+\DoxyCodeLine{00182\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

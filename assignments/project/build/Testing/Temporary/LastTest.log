@@ -1,0 +1,66 @@
+Start testing: Dec 04 11:30 CST
+----------------------------------------------------------
+1/1 Testing: testingExample
+1/1 Test: testingExample
+Command: "/Users/nidarsh/Code/Masters/CPP/assignments/project/build/testingExample"
+Directory: /Users/nidarsh/Code/Masters/CPP/assignments/project/build
+"testingExample" start time: Dec 04 11:30 CST
+Output:
+----------------------------------------------------------
+[==========] Running 15 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 15 tests from HammingCodeTest
+[ RUN      ] HammingCodeTest.SingleErrorCorrection
+Error Detected: Corrected at Position: 5
+[       OK ] HammingCodeTest.SingleErrorCorrection (0 ms)
+[ RUN      ] HammingCodeTest.NoError
+Error Detected: Corrected at Position: 6
+[       OK ] HammingCodeTest.NoError (0 ms)
+[ RUN      ] HammingCodeTest.AllZeros
+Data Intact: No Errors detected!
+[       OK ] HammingCodeTest.AllZeros (0 ms)
+[ RUN      ] HammingCodeTest.AllOnes
+Data Intact: No Errors detected!
+[       OK ] HammingCodeTest.AllOnes (0 ms)
+[ RUN      ] HammingCodeTest.RandomData
+Data Intact: No Errors detected!
+[       OK ] HammingCodeTest.RandomData (0 ms)
+[ RUN      ] HammingCodeTest.RandomData1
+Data Intact: No Errors detected!
+[       OK ] HammingCodeTest.RandomData1 (0 ms)
+[ RUN      ] HammingCodeTest.GeneratorMatrixDimensionCheck
+[       OK ] HammingCodeTest.GeneratorMatrixDimensionCheck (0 ms)
+[ RUN      ] HammingCodeTest.ParityCheckMatrixDimensionCheck
+[       OK ] HammingCodeTest.ParityCheckMatrixDimensionCheck (0 ms)
+[ RUN      ] HammingCodeTest.IdentityDimensionCheck
+[       OK ] HammingCodeTest.IdentityDimensionCheck (0 ms)
+[ RUN      ] HammingCodeTest.FileReadSuccess
+[       OK ] HammingCodeTest.FileReadSuccess (0 ms)
+[ RUN      ] HammingCodeTest.FileReadFailure
+File Error: File cannot be opened!
+[       OK ] HammingCodeTest.FileReadFailure (0 ms)
+[ RUN      ] HammingCodeTest.DecoderFunctionality
+Error Detected: Corrected at Position: 5
+Error Detected: Corrected at Position: 6
+Error Detected: Corrected at Position: 4
+[       OK ] HammingCodeTest.DecoderFunctionality (1 ms)
+[ RUN      ] HammingCodeTest.InvalidFile
+[       OK ] HammingCodeTest.InvalidFile (0 ms)
+[ RUN      ] HammingCodeTest.InvalidCodewordLength
+[       OK ] HammingCodeTest.InvalidCodewordLength (1 ms)
+[ RUN      ] HammingCodeTest.CorrectedErrorOutput
+[       OK ] HammingCodeTest.CorrectedErrorOutput (0 ms)
+[----------] 15 tests from HammingCodeTest (5 ms total)
+
+[----------] Global test environment tear-down
+[==========] 15 tests from 1 test suite ran. (5 ms total)
+[  PASSED  ] 15 tests.
+<end of output>
+Test time =   0.51 sec
+----------------------------------------------------------
+Test Passed.
+"testingExample" end time: Dec 04 11:30 CST
+"testingExample" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Dec 04 11:30 CST

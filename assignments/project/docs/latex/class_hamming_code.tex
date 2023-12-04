@@ -1,0 +1,224 @@
+\doxysection{Hamming\+Code Class Reference}
+\hypertarget{class_hamming_code}{}\label{class_hamming_code}\index{HammingCode@{HammingCode}}
+
+
+Class that represents a Hamming Code decoder.  
+
+
+
+
+{\ttfamily \#include $<$hamming\+\_\+code.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_hamming_code_a1592ecf605b22112b5298da79de499d5}{Hamming\+Code}} ()
+\begin{DoxyCompactList}\small\item\em Construct a new Hamming Code object Initializes the generator, parity, parity checker matrices. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_hamming_code_ad7a661c8d0f858f35adec1d73b1d52ab}{\texorpdfstring{$\sim$}{\string~}\+Hamming\+Code}} ()
+\begin{DoxyCompactList}\small\item\em Destructor for the Hamming Code object Destroys the objects assigned to this object. \end{DoxyCompactList}\item 
+Eigen\+::\+Matrix\+Xd \mbox{\hyperlink{class_hamming_code_ac6807dea81d5d50a5ced18b2a92f628c}{get\+Identity\+Matrix}} (const int SIZE) const
+\begin{DoxyCompactList}\small\item\em Function to generate the Identity Matrix of size Size. \end{DoxyCompactList}\item 
+Eigen\+::\+Matrix\+Xd \mbox{\hyperlink{class_hamming_code_a55f050d7a18c7a756a84beff386c1ed0}{get\+Generator\+Matrix}} () const
+\begin{DoxyCompactList}\small\item\em Getter Function for the Generator Matrix. \end{DoxyCompactList}\item 
+Eigen\+::\+Matrix\+Xd \mbox{\hyperlink{class_hamming_code_aadf4057ffb70c689d23a1ba981938fe6}{get\+Parity\+Check\+Matrix}} () const
+\begin{DoxyCompactList}\small\item\em Getter Function for the Parity Check Matrix. \end{DoxyCompactList}\item 
+Eigen\+::\+Matrix\+Xd \mbox{\hyperlink{class_hamming_code_a688fcbd5a04961d5a3c4cfa6e56e4789}{get\+Codeword\+Matrix}} () const
+\begin{DoxyCompactList}\small\item\em Getter Function for the Codeword Matrix object. \end{DoxyCompactList}\item 
+std\+::pair$<$ bool, Eigen\+::\+Vector\+Xd $>$ \mbox{\hyperlink{class_hamming_code_a93d80d69fca1177362534f48e884038d}{decode}} (const Eigen\+::\+Vector\+Xd \&codeword)
+\begin{DoxyCompactList}\small\item\em Decodes a 7-\/bit codeword using the Hamming (7,4) code. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_hamming_code_a56eaa6c7afdc09055c3a4f50fd7884e2}{decoder}} ()
+\begin{DoxyCompactList}\small\item\em Helper function to apply Hamming Decoder to each input codeword stored and obtained from the file. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_hamming_code_a540e7915f824d15e5f9e5e1b91c1a411}{read\+File}} (const std\+::string \&filename)
+\begin{DoxyCompactList}\small\item\em Function to read Hamming(7, 4) encoded codewords from a textfile and store it in an Eigen Matrix. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class that represents a Hamming Code decoder. 
+
+It utilizes the Hamming Code (7,4) to decode codewords. The Hamming code table used here is selected from several available variations. This particular version is chosen for its simplicity and common use. Please refer to this table for all decoding results\+:
+
+Hamming Code Table\+: \tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Data Bits (D)   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Encoded Hamming Code (H)    }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Data Bits (D)   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Encoded Hamming Code (H)    }\\\cline{1-2}
+\endhead
+0000   &0000000    \\\cline{1-2}
+0001   &0001011    \\\cline{1-2}
+0010   &0010101    \\\cline{1-2}
+0011   &0011110    \\\cline{1-2}
+0100   &0100110    \\\cline{1-2}
+0101   &0101101    \\\cline{1-2}
+0110   &0110011    \\\cline{1-2}
+0111   &0111000    \\\cline{1-2}
+1000   &1000111    \\\cline{1-2}
+1001   &1001100    \\\cline{1-2}
+1010   &1010010    \\\cline{1-2}
+1011   &1011001    \\\cline{1-2}
+1100   &1100001    \\\cline{1-2}
+1101   &1101010    \\\cline{1-2}
+1110   &1110100    \\\cline{1-2}
+1111   &1111111   \\\cline{1-2}
+\end{longtabu}
+
+
+Note\+: Due to the existence of multiple encoding schemes, this table should be used as the reference for all decoding operations performed by this decoder. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_hamming_code_a1592ecf605b22112b5298da79de499d5}\label{class_hamming_code_a1592ecf605b22112b5298da79de499d5} 
+\index{HammingCode@{HammingCode}!HammingCode@{HammingCode}}
+\index{HammingCode@{HammingCode}!HammingCode@{HammingCode}}
+\doxysubsubsection{\texorpdfstring{HammingCode()}{HammingCode()}}
+{\footnotesize\ttfamily Hamming\+Code\+::\+Hamming\+Code (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Construct a new Hamming Code object Initializes the generator, parity, parity checker matrices. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+\Hypertarget{class_hamming_code_ad7a661c8d0f858f35adec1d73b1d52ab}\label{class_hamming_code_ad7a661c8d0f858f35adec1d73b1d52ab} 
+\index{HammingCode@{HammingCode}!````~HammingCode@{\texorpdfstring{$\sim$}{\string~}HammingCode}}
+\index{````~HammingCode@{\texorpdfstring{$\sim$}{\string~}HammingCode}!HammingCode@{HammingCode}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}HammingCode()}{\string~HammingCode()}}
+{\footnotesize\ttfamily Hamming\+Code\+::\texorpdfstring{$\sim$}{\string~}\+Hamming\+Code (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructor for the Hamming Code object Destroys the objects assigned to this object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_hamming_code_a93d80d69fca1177362534f48e884038d}\label{class_hamming_code_a93d80d69fca1177362534f48e884038d} 
+\index{HammingCode@{HammingCode}!decode@{decode}}
+\index{decode@{decode}!HammingCode@{HammingCode}}
+\doxysubsubsection{\texorpdfstring{decode()}{decode()}}
+{\footnotesize\ttfamily std\+::pair$<$ bool, Eigen\+::\+Vector\+Xd $>$ Hamming\+Code\+::decode (\begin{DoxyParamCaption}\item[{const Eigen\+::\+Vector\+Xd \&}]{codeword }\end{DoxyParamCaption})}
+
+
+
+Decodes a 7-\/bit codeword using the Hamming (7,4) code. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em codeword} & The 7-\/bit codeword to decode \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pair containing a bool indicating success or error detection, and the 4-\/bit decoded message or empty message in case of multiple errors. 
+\end{DoxyReturn}
+\Hypertarget{class_hamming_code_a56eaa6c7afdc09055c3a4f50fd7884e2}\label{class_hamming_code_a56eaa6c7afdc09055c3a4f50fd7884e2} 
+\index{HammingCode@{HammingCode}!decoder@{decoder}}
+\index{decoder@{decoder}!HammingCode@{HammingCode}}
+\doxysubsubsection{\texorpdfstring{decoder()}{decoder()}}
+{\footnotesize\ttfamily void Hamming\+Code\+::decoder (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Helper function to apply Hamming Decoder to each input codeword stored and obtained from the file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+\Hypertarget{class_hamming_code_a688fcbd5a04961d5a3c4cfa6e56e4789}\label{class_hamming_code_a688fcbd5a04961d5a3c4cfa6e56e4789} 
+\index{HammingCode@{HammingCode}!getCodewordMatrix@{getCodewordMatrix}}
+\index{getCodewordMatrix@{getCodewordMatrix}!HammingCode@{HammingCode}}
+\doxysubsubsection{\texorpdfstring{getCodewordMatrix()}{getCodewordMatrix()}}
+{\footnotesize\ttfamily Eigen\+::\+Matrix\+Xd Hamming\+Code\+::get\+Codeword\+Matrix (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Getter Function for the Codeword Matrix object. 
+
+\begin{DoxyReturn}{Returns}
+Eigen\+::\+Matrix\+Xd Codeword Matrix containing several codeword inputs 
+\end{DoxyReturn}
+\Hypertarget{class_hamming_code_a55f050d7a18c7a756a84beff386c1ed0}\label{class_hamming_code_a55f050d7a18c7a756a84beff386c1ed0} 
+\index{HammingCode@{HammingCode}!getGeneratorMatrix@{getGeneratorMatrix}}
+\index{getGeneratorMatrix@{getGeneratorMatrix}!HammingCode@{HammingCode}}
+\doxysubsubsection{\texorpdfstring{getGeneratorMatrix()}{getGeneratorMatrix()}}
+{\footnotesize\ttfamily Eigen\+::\+Matrix\+Xd Hamming\+Code\+::get\+Generator\+Matrix (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Getter Function for the Generator Matrix. 
+
+\begin{DoxyReturn}{Returns}
+Eigen\+::\+Matrix\+Xd Generator Matrix 
+\end{DoxyReturn}
+\Hypertarget{class_hamming_code_ac6807dea81d5d50a5ced18b2a92f628c}\label{class_hamming_code_ac6807dea81d5d50a5ced18b2a92f628c} 
+\index{HammingCode@{HammingCode}!getIdentityMatrix@{getIdentityMatrix}}
+\index{getIdentityMatrix@{getIdentityMatrix}!HammingCode@{HammingCode}}
+\doxysubsubsection{\texorpdfstring{getIdentityMatrix()}{getIdentityMatrix()}}
+{\footnotesize\ttfamily Eigen\+::\+Matrix\+Xd Hamming\+Code\+::get\+Identity\+Matrix (\begin{DoxyParamCaption}\item[{const int}]{SIZE }\end{DoxyParamCaption}) const}
+
+
+
+Function to generate the Identity Matrix of size Size. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em SIZE} & Integer value containing the size of the identity matrix \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Eigen\+::\+Matrix\+Xd Identity Matrix of size Size 
+\end{DoxyReturn}
+\Hypertarget{class_hamming_code_aadf4057ffb70c689d23a1ba981938fe6}\label{class_hamming_code_aadf4057ffb70c689d23a1ba981938fe6} 
+\index{HammingCode@{HammingCode}!getParityCheckMatrix@{getParityCheckMatrix}}
+\index{getParityCheckMatrix@{getParityCheckMatrix}!HammingCode@{HammingCode}}
+\doxysubsubsection{\texorpdfstring{getParityCheckMatrix()}{getParityCheckMatrix()}}
+{\footnotesize\ttfamily Eigen\+::\+Matrix\+Xd Hamming\+Code\+::get\+Parity\+Check\+Matrix (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Getter Function for the Parity Check Matrix. 
+
+\begin{DoxyReturn}{Returns}
+Eigen\+::\+Matrix\+Xd Parity Checking Matrix 
+\end{DoxyReturn}
+\Hypertarget{class_hamming_code_a540e7915f824d15e5f9e5e1b91c1a411}\label{class_hamming_code_a540e7915f824d15e5f9e5e1b91c1a411} 
+\index{HammingCode@{HammingCode}!readFile@{readFile}}
+\index{readFile@{readFile}!HammingCode@{HammingCode}}
+\doxysubsubsection{\texorpdfstring{readFile()}{readFile()}}
+{\footnotesize\ttfamily void Hamming\+Code\+::read\+File (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filename }\end{DoxyParamCaption})}
+
+
+
+Function to read Hamming(7, 4) encoded codewords from a textfile and store it in an Eigen Matrix. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & A String value containing the name of the file to read. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+hamming\+\_\+code.\+h\item 
+hamming\+\_\+code.\+cpp\end{DoxyCompactItemize}
